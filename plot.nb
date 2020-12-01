@@ -10,26 +10,15 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1486776,      24521]
-NotebookOptionsPosition[   1486123,      24504]
-NotebookOutlinePosition[   1486513,      24520]
-CellTagsIndexPosition[   1486470,      24517]
+NotebookDataLength[   1486471,      24511]
+NotebookOptionsPosition[   1485818,      24494]
+NotebookOutlinePosition[   1486208,      24510]
+CellTagsIndexPosition[   1486165,      24507]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{
-   "SetDirectory", "[", 
-    "\"\</CURRO/VALENCIA/MIRRORS/CURRO_left/CUDA/2D/REPOSITORY\>\"", "]"}], 
-   ";"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{
-    "SetDirectory", "[", "\"\<~/programming_PRUEBAS/REPOprueba\>\"", "]"}], 
-    ";"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"l", "=", 
    RowBox[{
@@ -107,8 +96,9 @@ Cell[BoxData[{
    RowBox[{"Frame", "->", "False"}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.8158101070623903`*^9, 3.815810139800479*^9}, {
    3.815810181569366*^9, 3.815810203084277*^9}, {3.815812173946205*^9, 
-   3.815812180424039*^9}, 3.8158125796229753`*^9},
- CellLabel->"In[91]:=",ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"],
+   3.815812180424039*^9}, 3.8158125796229753`*^9, {3.815819661616394*^9, 
+   3.815819661943054*^9}},ExpressionUUID->"ffffffff-ffff-4fff-bfff-\
+ffffffffffff"],
 
 Cell[BoxData[
  StyleBox[
@@ -24519,10 +24509,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3143, 90, 383, "Input",ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"],
-Cell[3704, 112, 742, 21, 39, InheritFromParent,ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"],
-Cell[4449, 135, 608, 11, 30, "Input",ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"],
-Cell[5060, 148, 1481059, 24354, 385, InheritFromParent,ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"]
+Cell[558, 20, 2838, 80, 339, "Input",ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"],
+Cell[3399, 102, 742, 21, 39, InheritFromParent,ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"],
+Cell[4144, 125, 608, 11, 30, "Input",ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"],
+Cell[4755, 138, 1481059, 24354, 385, InheritFromParent,ExpressionUUID->"ffffffff-ffff-4fff-bfff-ffffffffffff"]
 }
 ]
 *)
