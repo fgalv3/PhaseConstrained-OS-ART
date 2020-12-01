@@ -6,7 +6,8 @@ about algebraic reconstruction technique applied to MRI when oversampled acquisi
 image to real values is used. 
 
 Two kind of MRI k-space trajectories are used: Echo-Planar Imaging (EPI) and Spiral trajectories, both with/without acceleration. 
-Examples are given in program.c, which ouputs kspace, signal and reconstructed image.
+Examples are given in program.c, which ouputs kspace, signal and reconstructed image. A Mathematica program is given with plots of example 
+reconstructions with a Shepp-Logan and Spiral trajectory.
 
 The code needs armadillo-c++ library to work.
 
