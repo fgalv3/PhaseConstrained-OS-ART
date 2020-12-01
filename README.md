@@ -11,4 +11,6 @@ reconstructions with a Shepp-Logan and Spiral trajectory.
 
 The code needs armadillo-c++ library to work.
 
+Author: Fernando Galve, i3M, CSIC-UPV, Valencia, Spain.
+
 
