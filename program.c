@@ -28,10 +28,10 @@ int main(int argc,char *argv[]){
     int nx=256;
     int nn=nx*nx;
     
+    //import sample
     vec SAMPLE(nn);
     FILE *archivo;
     archivo=fopen("SHEPP256x256.dat","r");
-   
     for(int i=0; i<nn;i++){
         fscanf(archivo, "%lf",&SAMPLE(i));
     }
@@ -62,9 +62,9 @@ int main(int argc,char *argv[]){
     vec outRHO(NN,fill::zeros);
     
 //     outRHO=PWS(kS,signal,tSTEPS, NX);//DFT
-//     outRHO=ARTabs(kS,signal,tSTEPS,NX,lambda,nITERATIONS);
-//     outRHO=ARTlinear(kS,signal,tSTEPS,NX,lambda,nITERATIONS);
-    outRHO=ARTtv(kS,signal,tSTEPS,NX,lambda,nITERATIONS,BETA);
+    outRHO=ARTabs(kS,signal,tSTEPS,NX,lambda,nITERATIONS);//phase constrained ART
+//     outRHO=ARTlinear(kS,signal,tSTEPS,NX,lambda,nITERATIONS);//linear ART
+//     outRHO=ARTtv(kS,signal,tSTEPS,NX,lambda,nITERATIONS,BETA);// phase constrained ART with TV penalty
     
     //normalize reconstructed image to be at levels similar to phantom20red
     double AVERAGE=0.0;
@@ -82,6 +82,17 @@ int main(int argc,char *argv[]){
         fprintf(out,"%2.20f\n",outRHO[i]);
     }
     fclose(out);
+    
+    
+    //quality of reconstruction: compare to a downsized 120x120 sample
+    vec SAMPLE2(NN);
+    FILE *archivo2;
+    archivo2=fopen("SHEPP256_120red2D.dat","r");
+    for(int i=0; i<NN;i++){
+        fscanf(archivo2, "%lf",&SAMPLE2(i));
+    }
+    
+    printf("quality(SSIM) = %2.4f\n",SSIM(outRHO,SAMPLE2,NN));
     
     return 0;
 }

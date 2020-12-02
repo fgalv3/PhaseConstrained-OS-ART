@@ -14,8 +14,8 @@ const std::complex<double> II(0,1);
 
 using namespace arma;
 
-double SSIM(double tTOT2, vec RHO,vec SAMPLE2, int nn2);
-void print2Dquality(double tTOT2, vec RHO,vec SAMPLE2, int nn2);
+double SSIM(vec RHO,vec SAMPLE2, int nn2);
+void print2Dquality(double tTOT, vec RHO,vec SAMPLE2, int nn2);
 
 vec EPI(double tTOT,double dt, int ACCEL);
 vec SPI(double tTOT,double dt, int ACCEL);
