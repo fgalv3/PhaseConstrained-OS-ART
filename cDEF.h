@@ -26,4 +26,5 @@ vec PWS(vec kSPACE, cx_vec signal, int tSTEPS, int NX);
 vec ARTabs(vec kSPACE, cx_vec signal, int tSTEPS, int NX, double lambda, int nITERATIONS);
 vec ARTlinear(vec kSPACE, cx_vec signal, int tSTEPS, int NX, double lambda, int nITERATIONS);
 vec ARTtv(vec kSPACE, cx_vec signal, int tSTEPS, int NX, double lambda, int nITERATIONS, double beta);
+vec ARTtv2(vec kSPACE, cx_vec signal, int tSTEPS, int NX, double lambda, int nITERATIONS, double beta);
 
