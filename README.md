@@ -9,7 +9,7 @@ Two kind of MRI k-space trajectories are used: Echo-Planar Imaging (EPI) and Spi
 Four reconstruction methods are used: plane waves sum (equivalent to DFT for Nyquist grid), ART with/without phase projection, ART with l1-norm (approx.)
 TV penalty. Examples are given in program.c, which ouputs kspace, signal and reconstructed image. A Mathematica program is given with plots of example 
 reconstructions with a Shepp-Logan and Spiral trajectory.
-One can directly now with the static library libART.a
+One can now directly link with the static library libART.a
 
 The code needs armadillo-c++ library to work.
 
