@@ -10,7 +10,7 @@ cx_vec sigGen(vec kSPACE, int tSTEPS, vec SAMPLE, int nx){
     for(int t=0;t<tSTEPS;t++){
         GX=kSPACE[t*2];
         GY=kSPACE[t*2+1];
-        SINC=2.0*sin(dx*GX/2.0)*sin(dx*GY/2.0)/(0.000000000000001+GX*GY);
+        SINC=2.0*sinc(dx*GX/2.0)*sinc(dx*GY/2.0);
         for(int i = 0; i <nx; i++){
             x=-FoV/2.0+i*FoV/(nx-1);
             for(int j =0; j < nx; j++){
@@ -194,3 +194,4 @@ vec ARTtv2(vec kSPACE, cx_vec signal, int tSTEPS, int NX, double lambda, int nIT
     
     return abs(RHO);
 }
+

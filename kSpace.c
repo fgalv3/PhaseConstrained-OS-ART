@@ -18,13 +18,13 @@ vec EPI(double tTOT,double dt, int ACCEL){
         int t=0;
         for(int kx=0;kx<NkX;kx+=2){
             for(int ky=0;ky<NkY;ky++){
-                kS[t*2]=(-(NkX-1)/2+kx+0.0001)*dkX;
-                kS[t*2+1]=(-(NkY-1)/2+ky+0.0001)*dkY;
+                kS[t*2]=(-(NkX-1)/2+kx)*dkX;
+                kS[t*2+1]=(-(NkY-1)/2+ky)*dkY;
                 t++;
             }
             for(int ky=0;ky<NkY;ky++){
-                kS[t*2]=(-(NkX-1)/2+kx+1+0.0001)*dkX;
-                kS[t*2+1]=((NkY-1)/2-ky+0.0001)*dkY;
+                kS[t*2]=(-(NkX-1)/2+kx+1)*dkX;
+                kS[t*2+1]=((NkY-1)/2-ky)*dkY;
                 t++;
             }
         }
@@ -57,8 +57,8 @@ vec SPI(double tTOT,double dt, int ACCEL){
                 origin=(beta*Ts*Ts/2.0)/(LAMBDA+beta*pow(Ts,4.0/3.0)/(2.0*a2));
                 theta=sqrt(pow(origin,2.0)+GAMMA*G0*(t*dt-Ts)/(PI*lam) );
             }
-            kS[t*2]  =0.0001+ACCEL*theta*cos(theta)/FoV;
-            kS[t*2+1]=0.0001+ACCEL*theta*sin(theta)/FoV;
+            kS[t*2]  =ACCEL*theta*cos(theta)/FoV;
+            kS[t*2+1]=ACCEL*theta*sin(theta)/FoV;
         }
         
         return kS;
