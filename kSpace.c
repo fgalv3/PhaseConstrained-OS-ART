@@ -18,18 +18,20 @@ vec EPI(double tTOT,double dt, int ACCEL){
         int t=0;
         for(int kx=0;kx<NkX;kx+=2){
             for(int ky=0;ky<NkY;ky++){
+                if(t>=tSTEPS){break;}
                 kS[t*2]=(-(NkX-1)/2+kx)*dkX;
                 kS[t*2+1]=(-(NkY-1)/2+ky)*dkY;
                 t++;
             }
             for(int ky=0;ky<NkY;ky++){
+                if(t>=tSTEPS){break;}
                 kS[t*2]=(-(NkX-1)/2+kx+1)*dkX;
                 kS[t*2+1]=((NkY-1)/2-ky)*dkY;
                 t++;
             }
         }
-        
-         return kS;
+
+        return kS;
 }
 
 vec SPI(double tTOT,double dt, int ACCEL){
